@@ -19,11 +19,9 @@ struct ActivityView: View {
                 if let activity = viewModel.activity{
                     VStack {
                         Spacer()
-                        Image(systemName: "figure.surfing")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 300, height: 300)
-                        
+                        LottieView(name: "education", loop: true)
+                            .scaleEffect(CGSize(width: 0.5, height: 0.5))
+                            .frame(width: 300,height: 300)
                         Text(activity.activity)
                             .font(.largeTitle)
                             .multilineTextAlignment(.center)
