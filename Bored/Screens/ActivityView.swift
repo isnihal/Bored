@@ -43,6 +43,7 @@ struct ActivityView: View {
                     .foregroundStyle(Color(uiColor: .label ))
                     .background(.brandPrimary, in: .circle)
             })
+            .padding(.trailing)
         })
     }
 }
