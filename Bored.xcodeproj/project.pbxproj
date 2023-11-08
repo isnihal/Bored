@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A020BB382AFBBDD800451605 /* BoredApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020BB372AFBBDD800451605 /* BoredApp.swift */; };
-		A020BB3A2AFBBDD800451605 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020BB392AFBBDD800451605 /* ContentView.swift */; };
+		A020BB3A2AFBBDD800451605 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020BB392AFBBDD800451605 /* ActivityView.swift */; };
 		A020BB3C2AFBBDD800451605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A020BB3B2AFBBDD800451605 /* Assets.xcassets */; };
 		A020BB3F2AFBBDD800451605 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A020BB3E2AFBBDD800451605 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		A020BB342AFBBDD800451605 /* Bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A020BB372AFBBDD800451605 /* BoredApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredApp.swift; sourceTree = "<group>"; };
-		A020BB392AFBBDD800451605 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A020BB392AFBBDD800451605 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		A020BB3B2AFBBDD800451605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A020BB3E2AFBBDD800451605 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				A020BB372AFBBDD800451605 /* BoredApp.swift */,
-				A020BB392AFBBDD800451605 /* ContentView.swift */,
+				A020BB392AFBBDD800451605 /* ActivityView.swift */,
 				A020BB3B2AFBBDD800451605 /* Assets.xcassets */,
 				A020BB3D2AFBBDD800451605 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A020BB3A2AFBBDD800451605 /* ContentView.swift in Sources */,
+				A020BB3A2AFBBDD800451605 /* ActivityView.swift in Sources */,
 				A020BB382AFBBDD800451605 /* BoredApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
