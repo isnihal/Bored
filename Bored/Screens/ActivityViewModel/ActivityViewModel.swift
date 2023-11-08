@@ -10,6 +10,18 @@ import Foundation
 @Observable class ActivityViewModel{
     var activity: Activity?
     var isLoading = false
+    var activityLink: URL{
+        if let activity{
+            if !activity.link.isEmpty{
+                return URL(string: activity.link) ?? defaultUrl
+            } else{
+                return URL(string: activity.activity.googleSearchUrlString) ?? defaultUrl
+            }
+        }
+        return defaultUrl
+    }
+    
+    let defaultUrl = URL(string: "https://www.apple.com/")!
     
     func loadActivity(){
         isLoading = true
@@ -22,5 +34,9 @@ import Foundation
                 print("Error: \(error)")
             }
         }
+    }
+    
+    func launchLink(){
+        
     }
 }

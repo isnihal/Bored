@@ -31,14 +31,18 @@ struct ActivityView: View {
                             .padding(.top,48)
                         
                         Spacer()
-                        Button(action: {}, label: {
-                            Text("Get Started")
-                                .font(.title2)
-                                .bold()
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,
-                                       maxHeight: 60
-                                )
-                                .foregroundStyle(Color(uiColor: .label))
+                        Button(action: {
+                            
+                        }, label: {
+                            Link(destination: viewModel.activityLink, label: {
+                                Text("Get Started")
+                                    .font(.title2)
+                                    .bold()
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,
+                                           maxHeight: 60
+                                    )
+                                    .foregroundStyle(Color(uiColor: .label))
+                            })
                         })
                         .background(.brandPrimary, in: .capsule)
                         .padding(.bottom)

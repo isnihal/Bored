@@ -11,6 +11,7 @@
 		A00C0CFC2AFBE66500414B7A /* ActivityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C0CFB2AFBE66500414B7A /* ActivityError.swift */; };
 		A00C0CFF2AFBE67900414B7A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C0CFE2AFBE67900414B7A /* Activity.swift */; };
 		A00C0D022AFBEAA200414B7A /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C0D012AFBEAA200414B7A /* ActivityViewModel.swift */; };
+		A00C0D052AFBF07600414B7A /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C0D042AFBF07600414B7A /* String+Ext.swift */; };
 		A020BB382AFBBDD800451605 /* BoredApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020BB372AFBBDD800451605 /* BoredApp.swift */; };
 		A020BB3A2AFBBDD800451605 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020BB392AFBBDD800451605 /* ActivityView.swift */; };
 		A020BB3C2AFBBDD800451605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A020BB3B2AFBBDD800451605 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		A00C0CFB2AFBE66500414B7A /* ActivityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityError.swift; sourceTree = "<group>"; };
 		A00C0CFE2AFBE67900414B7A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		A00C0D012AFBEAA200414B7A /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		A00C0D042AFBF07600414B7A /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		A020BB342AFBBDD800451605 /* Bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A020BB372AFBBDD800451605 /* BoredApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredApp.swift; sourceTree = "<group>"; };
 		A020BB392AFBBDD800451605 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		A00C0CFA2AFBE65300414B7A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A00C0D032AFBF06B00414B7A /* Extensions */,
 				A00C0CFD2AFBE66B00414B7A /* Errors */,
 			);
 			path = Utilities;
@@ -87,6 +90,14 @@
 				A00C0D012AFBEAA200414B7A /* ActivityViewModel.swift */,
 			);
 			path = ActivityViewModel;
+			sourceTree = "<group>";
+		};
+		A00C0D032AFBF06B00414B7A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A00C0D042AFBF07600414B7A /* String+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A020BB2B2AFBBDD800451605 = {
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00C0CFF2AFBE67900414B7A /* Activity.swift in Sources */,
+				A00C0D052AFBF07600414B7A /* String+Ext.swift in Sources */,
 				A00C0CF82AFBE54C00414B7A /* NetworkManager.swift in Sources */,
 				A00C0CFC2AFBE66500414B7A /* ActivityError.swift in Sources */,
 				A020BB3A2AFBBDD800451605 /* ActivityView.swift in Sources */,
