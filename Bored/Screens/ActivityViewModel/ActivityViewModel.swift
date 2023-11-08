@@ -25,8 +25,11 @@ import Foundation
     
     func loadActivity(){
         isLoading = true
+        
         Task{
             do{
+                //Add a small delay for improved UX
+                try await Task.sleep(for: .seconds(2))
                 activity = try await NetworkManager.shared.getActivity()
                 isLoading = false
             }

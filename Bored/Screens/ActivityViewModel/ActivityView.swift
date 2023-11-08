@@ -14,12 +14,12 @@ struct ActivityView: View {
     var body: some View {
         VStack{
             if viewModel.isLoading{
-                ProgressView()
+                LoadingView()
             } else{
                 if let activity = viewModel.activity{
                     VStack {
                         Spacer()
-                        LottieView(name: "education", loop: true)
+                        LottieView(name: "education")
                             .scaleEffect(CGSize(width: 0.5, height: 0.5))
                             .frame(width: 300,height: 300)
                         Text(activity.activity)
