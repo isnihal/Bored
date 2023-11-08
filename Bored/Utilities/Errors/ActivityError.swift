@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum ActivityError: Error{
+    case invalidUrl
+    case invalidResponse
+    case serverError(statusCode: Int)
+    case invalidData
+}
