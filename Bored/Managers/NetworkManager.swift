@@ -15,7 +15,7 @@ final class NetworkManager{
         
     }
     
-    private let baseUrl = "http://www.boredapi.com/api/"
+    private let baseUrl = "https://www.boredapi.com/api/"
     
     func getActivity() async throws -> Activity{
         let activityUrl = baseUrl + "activity/"
