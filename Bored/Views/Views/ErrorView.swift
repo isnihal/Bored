@@ -20,6 +20,7 @@ struct ErrorView: View {
                 .padding()
             Text("Something went wrong\nPlease try again!")
                 .font(.system(size: 24))
+                .fontWeight(.medium)
                 .multilineTextAlignment(.center)
                 .padding(.top,32)
             Spacer()
