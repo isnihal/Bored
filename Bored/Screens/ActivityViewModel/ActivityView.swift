@@ -15,7 +15,11 @@ struct ActivityView: View {
         VStack{
             if viewModel.isLoading{
                 LoadingView()
-            } else{
+            } 
+            else if viewModel.isError{
+                ErrorView(viewModel: viewModel)
+            }
+            else{
                 if let activity = viewModel.activity{
                     VStack {
                         Spacer()
@@ -57,7 +61,7 @@ struct ActivityView: View {
                                 
                         })
                         .background(viewModel.activityThemeColor, in: .circle)
-                        .padding(.trailing)
+                        .padding()
                     })
                 }
             }

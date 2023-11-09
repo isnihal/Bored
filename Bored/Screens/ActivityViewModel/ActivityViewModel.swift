@@ -10,6 +10,27 @@ import SwiftUI
 @Observable class ActivityViewModel{
     var activity: Activity?
     var isLoading = false
+    var isError = false
+    
+    let defaultUrl = URL(string: "https://www.apple.com/")!
+    
+    func loadActivity(){
+        isLoading = true
+        Task{
+            do{
+                //Add a small delay for improved UX
+                try await Task.sleep(for: .seconds(1.5))
+                activity = try await NetworkManager.shared.getActivity()
+                isError = false
+            }
+            catch{
+                isError = true
+            }
+            
+            isLoading = false
+        }
+    }
+    
     var activityLink: URL{
         if let activity{
             if !activity.link.isEmpty{
@@ -19,24 +40,6 @@ import SwiftUI
             }
         }
         return defaultUrl
-    }
-    
-    let defaultUrl = URL(string: "https://www.apple.com/")!
-    
-    func loadActivity(){
-        isLoading = true
-        
-        Task{
-            do{
-                //Add a small delay for improved UX
-                try await Task.sleep(for: .seconds(1.5))
-                activity = try await NetworkManager.shared.getActivity()
-                isLoading = false
-            }
-            catch{
-                print("Error: \(error)")
-            }
-        }
     }
     
     var animationSize: CGSize{
