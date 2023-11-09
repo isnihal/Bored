@@ -14,13 +14,17 @@ struct ActivityView: View {
     var body: some View {
         VStack{
             if viewModel.isLoading{
-                ProgressView()
-            } else{
+                LoadingView()
+            } 
+            else if viewModel.isError{
+                ErrorView(viewModel: viewModel)
+            }
+            else{
                 if let activity = viewModel.activity{
                     VStack {
                         Spacer()
-                        LottieView(name: "education", loop: true)
-                            .scaleEffect(CGSize(width: 0.5, height: 0.5))
+                        LottieView(name: activity.type)
+                            .scaleEffect(viewModel.animationSize)
                             .frame(width: 300,height: 300)
                         Text(activity.activity)
                             .font(.largeTitle)
@@ -42,7 +46,7 @@ struct ActivityView: View {
                                     .foregroundStyle(Color(uiColor: .label))
                             })
                         })
-                        .background(.brandPrimary, in: .capsule)
+                        .background(viewModel.activityThemeColor, in: .capsule)
                         .padding(.bottom)
                     }
                     .padding()
@@ -54,9 +58,10 @@ struct ActivityView: View {
                                 .padding()
                                 .imageScale(.large)
                                 .foregroundStyle(Color(uiColor: .label ))
-                                .background(.brandPrimary, in: .circle)
+                                
                         })
-                        .padding(.trailing)
+                        .background(viewModel.activityThemeColor, in: .circle)
+                        .padding()
                     })
                 }
             }
