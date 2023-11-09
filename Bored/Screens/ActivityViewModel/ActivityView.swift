@@ -42,7 +42,7 @@ struct ActivityView: View {
                                     .foregroundStyle(Color(uiColor: .label))
                             })
                         })
-                        .background(.education, in: .capsule)
+                        .background(viewModel.activityThemeColor, in: .capsule)
                         .padding(.bottom)
                     }
                     .padding()
@@ -54,8 +54,9 @@ struct ActivityView: View {
                                 .padding()
                                 .imageScale(.large)
                                 .foregroundStyle(Color(uiColor: .label ))
-                                .background(.education, in: .circle)
+                                
                         })
+                        .background(viewModel.activityThemeColor, in: .circle)
                         .padding(.trailing)
                     })
                 }

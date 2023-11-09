@@ -29,7 +29,7 @@ struct LottieView: UIViewRepresentable{
 }
 
 #Preview(body: {
-    LottieView(name: "busywork")
-        .scaleEffect(CGSize(width: 0.55, height: 0.55))
+    LottieView(name: "relaxation")
+        .scaleEffect(CGSize(width: 1, height: 1))
         .frame(width: 300,height: 300)
 })
