@@ -22,8 +22,6 @@ struct ActivityView: View {
             else{
                 if let activity = viewModel.activity{
                     ActivityStack(activity: activity,viewModel: viewModel)
-                } else{
-                    ErrorView(viewModel: viewModel)
                 }
             }
         }
