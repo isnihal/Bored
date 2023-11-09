@@ -27,3 +27,9 @@ struct LottieView: UIViewRepresentable{
     
     func updateUIView(_ uiView: Lottie.LottieAnimationView, context: Context) {}
 }
+
+#Preview(body: {
+    LottieView(name: "busywork")
+        .scaleEffect(CGSize(width: 0.55, height: 0.55))
+        .frame(width: 300,height: 300)
+})

@@ -29,7 +29,7 @@ import Foundation
         Task{
             do{
                 //Add a small delay for improved UX
-                try await Task.sleep(for: .seconds(2))
+                try await Task.sleep(for: .seconds(1.5))
                 activity = try await NetworkManager.shared.getActivity()
                 isLoading = false
             }
@@ -39,7 +39,18 @@ import Foundation
         }
     }
     
-    func launchLink(){
-        
+    var animationSize: CGSize{
+        switch activity?.type{
+        case "education": return CGSize(width: 0.5, height: 0.5)
+        case "recreational": return CGSize(width: 0.09, height: 0.09)
+        case "social": return CGSize(width: 0.8, height: 0.8)
+        case "diy": return CGSize(width: 0.4, height: 0.4)
+        case "charity": return CGSize(width: 0.8, height: 0.8)
+        case "cooking": return CGSize(width: 0.35, height: 0.35)
+        case "relaxation": return CGSize(width: 1.1, height: 1.1)
+        case "music": return CGSize(width: 1.25, height: 1.25)
+        case "busywork": return CGSize(width: 0.55, height: 0.55)
+        default: return CGSize(width: 0.5, height: 0.5)
+        }
     }
 }

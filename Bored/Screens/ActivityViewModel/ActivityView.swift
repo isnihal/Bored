@@ -19,8 +19,8 @@ struct ActivityView: View {
                 if let activity = viewModel.activity{
                     VStack {
                         Spacer()
-                        LottieView(name: "education")
-                            .scaleEffect(CGSize(width: 0.5, height: 0.5))
+                        LottieView(name: activity.type)
+                            .scaleEffect(viewModel.animationSize)
                             .frame(width: 300,height: 300)
                         Text(activity.activity)
                             .font(.largeTitle)
@@ -42,7 +42,7 @@ struct ActivityView: View {
                                     .foregroundStyle(Color(uiColor: .label))
                             })
                         })
-                        .background(.brandPrimary, in: .capsule)
+                        .background(.education, in: .capsule)
                         .padding(.bottom)
                     }
                     .padding()
@@ -54,7 +54,7 @@ struct ActivityView: View {
                                 .padding()
                                 .imageScale(.large)
                                 .foregroundStyle(Color(uiColor: .label ))
-                                .background(.brandPrimary, in: .circle)
+                                .background(.education, in: .circle)
                         })
                         .padding(.trailing)
                     })
